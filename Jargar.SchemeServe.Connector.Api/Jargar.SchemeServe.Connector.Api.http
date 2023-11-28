@@ -1,0 +1,12 @@
+@Jargar.SchemeServe.Connector.Api_HostAddress = http://localhost:5122
+
+GET {{Jargar.SchemeServe.Connector.Api_HostAddress}}/api/connectors
+Accept: application/json
+
+###
+
+GET {{Jargar.SchemeServe.Connector.Api_HostAddress}}/api/connectors/RL4
+
+Accept: application/json
+
+###
