@@ -91,6 +91,7 @@ Revisit the following
      dotnet tool update --global dotnet-ef
      ```
    - Run the following in the terminal:
+     ```
      dotnet ef database update
      ```
 
