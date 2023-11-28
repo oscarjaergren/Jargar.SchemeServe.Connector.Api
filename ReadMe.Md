@@ -63,8 +63,17 @@ The Connector will return the following values (everything else from the externa
 The API must be created in .NET 7 (or higher).
 Write unit tests using XUnit or any preferred testing framework.
 Dapper is used as the .NET database object mapper.
-Notes for Self
-This project serves as a proof of concept for Native AOT and database support. Efforts have been made to minimize reflection usage, opting for source generators. Native AOT, while evolving, currently suits lightweight use cases.
+
+## Notes for Self
+This project serves as a proof of concept for Native AOT and database support. Efforts have been made to minimize reflection usage, opting for source generators. 
+Native AOT, while evolving, currently suits lightweight use cases. Yet it seems that while it is likely possible to use NativeAOT with a database it is not straight forward,
+resources are limited and currently it seems there's only support for SQLite, Dapper does seem to have a NativeAOT package but further investigation need to be done in what is possible. 
+
+For now, NativeAOT has been disabled as it clashes with the EF insertion of object, getting them however is fine, so for this project at the moment, we can't save the providers with NativeAOT.  
+
+Revisit the following
+- Investigate Dapper and if it is possible to enable NativeAOT that way.
+- Test if Redis is NativeAot compaitable. (I believe it is)
 
 ## Requirements
 
