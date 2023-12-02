@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
 [JsonSourceGenerationOptions(PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase, DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull)]
@@ -20,9 +21,9 @@ public partial class ProviderContext : JsonSerializerContext
 
 public record Provider
 {
+    [Column(TypeName = "TEXT")]  // Specify the column type as TEXT
     public required string ProviderId { get; set; }
 
-    public List<string> LocationIds { get; set; } = [];
     public string OrganisationType { get; set; } = string.Empty;
     public string OwnershipType { get; set; } = string.Empty;
     public string Type { get; set; } = string.Empty;

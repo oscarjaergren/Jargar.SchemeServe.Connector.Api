@@ -5,7 +5,7 @@ Accept: application/json
 
 ###
 
-GET {{Jargar.SchemeServe.Connector.Api_HostAddress}}/api/connectors/RL4
+GET {{Jargar.SchemeServe.Connector.Api_HostAddress}}/api/connectors/1-10000227676
 
 Accept: application/json
 
